@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriLife - Διατροφές & BMI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="site-header">
+    <nav class="nav container">
+        <a href="." class="logo">NutriLife</a>
+        <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Διατροφές</a></li>
+            <li><a href="recipes.html" class="nav-link">Συνταγές</a></li>
+            <li><a href="tips.html" class="nav-link">Tips</a></li>
+            <li><a href="myths.html" class="nav-link">Μύθοι</a></li>
+            <li><a href="exercise.html" class="nav-link">Γυμναστική</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Αλλαγή θέματος">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- BMI Calculator -->
+    <section class="bmi-calculator animate-slide-up">
+        <h2>Υπολογιστής BMI</h2>
+        <form id="bmi-form" class="bmi-form">
+            <label><input type="number" id="weight" placeholder="Βάρος (kg)" step="0.1" required></label>
+            <label><input type="number" id="height" placeholder="Ύψος (cm)" step="0.1" required></label>
+            <button type="submit">Υπολογισμός</button>
+        </form>
+        <output id="bmi-result" class="bmi-result"></output>
+    </section>
+
+    <!-- Διατροφές Κάρτες -->
+    <section class="diets-section">
+        <h2 class="section-title animate-fade">Διατροφές</h2>
+        <div class="cards-grid" id="diets-container">
+            <!-- Φορτώνονται με JS -->
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">© 2025 NutriLife</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
